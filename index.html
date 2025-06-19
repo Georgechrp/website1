@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Personal CV</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1 data-i18n="name">Your Name</h1>
+    <p data-i18n="title">Software Engineer | Data Scientist</p>
+    <nav>
+      <a href="#about" data-i18n="about">About</a>
+      <a href="#skills" data-i18n="skills">Skills</a>
+      <a href="#experience" data-i18n="experience">Experience</a>
+      <a href="#education" data-i18n="education">Education</a>
+      <a href="#contact" data-i18n="contact">Contact</a>
+      <select id="langSwitcher">
+        <option value="en">EN</option>
+        <option value="gr">GR</option>
+      </select>
+    </nav>
+  </header>
+  <main>
+    <section id="about">
+      <h2 data-i18n="about">About Me</h2>
+      <p data-i18n="about_text">I am a passionate developer with a strong interest in software engineering, data science, and creating impactful digital products.</p>
+    </section>
+    <section id="skills">
+      <h2 data-i18n="skills">Skills</h2>
+      <ul>
+        <li>Python</li>
+        <li>Kotlin</li>
+        <li>Machine Learning</li>
+        <li>HTML/CSS/JS</li>
+      </ul>
+    </section>
+    <section id="experience">
+      <h2 data-i18n="experience">Experience</h2>
+      <p>Editable via Netlify CMS</p>
+    </section>
+    <section id="education">
+      <h2 data-i18n="education">Education</h2>
+      <p>B.Sc. in Computer Science - University of Athens</p>
+    </section>
+    <section id="contact">
+      <h2 data-i18n="contact">Contact</h2>
+      <p>Email: you@example.com</p>
+      <p>GitHub: <a href="https://github.com/yourprofile" target="_blank">yourprofile</a></p>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 Your Name</p>
+  </footer>
+</body>
+</html>
