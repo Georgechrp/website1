@@ -1,8 +1,8 @@
 {
   "en": {
-    "title": "ChordsHub",
+    "title": "Engineer",
     "subtitle": "Find and explore chords for your favorite songs",
-    "about": "About the App",
+    "about": "About me",
     "about_text": "ChordsHub is a thesis project Android app developed using Kotlin and Jetpack Compose. It allows users to find chords for songs and explore music easily.",
     "projects": "Screenshots",
     "screenshots": "Screenshots",
@@ -11,9 +11,9 @@
     "form_link": "Give us your feedback here"
   },
   "gr": {
-    "title": "ChordsHub",
+    "title": "Μηχανικός",
     "subtitle": "Βρες και εξερεύνησε συγχορδίες για αγαπημένα τραγούδια",
-    "about": "Σχετικά με την εφαρμογή",
+    "about": "Λίγα λόγια για μένα",
     "about_text": "Το ChordsHub είναι μια πτυχιακή εφαρμογή Android με Kotlin και Jetpack Compose που βοηθά στη εύρεση συγχορδιών.",
     "projects": "Στιγμιότυπα",
     "screenshots": "Στιγμιότυπα",
