@@ -3,15 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>My Personal CV</title>
+    <title id="title">My Personal CV</title>
     <link rel="stylesheet" href="style.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+
   </head>
     <body>
         <header>
-          <h1 data-i18n="name">Nicola Tesla</h1>
+          <h1 id="name" data-i18n="name">Nicola Tesla</h1>
           <img src="images/nicolatesla.jpg" alt="Profile Photo" class="profile-pic">
           <p data-i18n="title"> Engineer</p>
           <nav>
@@ -30,7 +32,7 @@
         <main>
           <section id="about" data-aos="fade-up">
             <h2 data-i18n="about">About Me</h2>
-            <p data-i18n="about_text">I am a passionate developer with a strong interest in software engineering, data science, and creating impactful digital products.</p>
+            <p id="about" data-i18n="about_text">I am a passionate developer with a strong interest in software engineering, data science, and creating impactful digital products.</p>
           </section>
 
           <section id="skills" data-aos="fade-up">
@@ -55,8 +57,8 @@
 
           <section id="contact" data-aos="fade-up">
             <h2 data-i18n="contact">Contact</h2>
-            <p>Email: you@example.com</p>
-            <p>GitHub: <a href="https://github.com/yourprofile" target="_blank">yourprofile</a></p>
+            <p id="email">Email: you@example.com</p>
+            <p id="github">GitHub: <a href="https://github.com/yourprofile" target="_blank">yourprofile</a></p>
           </section>
         </main>
 
