@@ -10,7 +10,7 @@ collections:
     label: "Main Info"
     files:
       - file: "data/site.yml"
-        label: "Site Metadata"
+        label: "Main informations"
         name: "site"
         fields:
           - { label: "Browser Title", name: "title", widget: "string" }
