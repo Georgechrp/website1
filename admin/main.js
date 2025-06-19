@@ -8,6 +8,4 @@ if (window.netlifyIdentity) {
   });
 }
 
-import CMS from "netlify-cms-app";
-
-CMS.init();
+window.CMS.init();
