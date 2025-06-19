@@ -1,4 +1,3 @@
-
 backend:
   name: git-gateway
   branch: main
@@ -7,46 +6,11 @@ media_folder: "images"
 public_folder: "/images"
 
 collections:
-  - name: "site_settings"
-    label: "Site Settings"
+  - name: "pages"
+    label: "Pages"
     files:
       - file: "data/site.yml"
-        label: "Main Info"
-        name: "main_info"
+        label: "Site Settings"
+        name: "site_settings"
         fields:
-          - { label: "Name", name: "name", widget: "string" }
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Profile Photo", name: "profile_photo", widget: "image" }
-          - { label: "About Me", name: "about_text", widget: "text" }
-          - { label: "Email", name: "email", widget: "string" }
-          - { label: "GitHub URL", name: "github", widget: "string" }
-
-  - name: "skills"
-    label: "Skills"
-    folder: "content/skills"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Skill", name: "title", widget: "string" }
-
-  - name: "experience"
-    label: "Experience"
-    folder: "content/experience"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Position", name: "position", widget: "string" }
-      - { label: "Company", name: "company", widget: "string" }
-      - { label: "Start Date", name: "start", widget: "date" }
-      - { label: "End Date", name: "end", widget: "date", required: false }
-      - { label: "Description", name: "description", widget: "text" }
-
-  - name: "education"
-    label: "Education"
-    folder: "content/education"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Degree", name: "degree", widget: "string" }
-      - { label: "Institution", name: "institution", widget: "string" }
-      - { label: "Year", name: "year", widget: "string" }
