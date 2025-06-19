@@ -58,10 +58,13 @@ collections:
 
   - name: "contact"
     label: "Contact"
-    files:
-      - file: "data/contact.yml"
-        label: "Contact Info"
-        name: "contact"
+    file: "data/contact.yml"
+    fields:
+      - { label: "Email", name: "email", widget: "string" }
+      - label: "Social Links"
+        name: "socials"
+        widget: "list"
         fields:
-          - { label: "Email", name: "email", widget: "string" }
-          - { label: "GitHub", name: "github", widget: "string" }
+          - { label: "Platform", name: "platform", widget: "string" }
+          - { label: "URL", name: "url", widget: "string" }
+

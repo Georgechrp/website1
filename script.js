@@ -28,13 +28,20 @@ async function loadSiteData() {
     document.getElementById("about").textContent = aboutData.about_text;
 
     // contact.yml
-    const resContact = await fetch(base + "/data/contact.yml");
-    const contactYml = await resContact.text();
-    const contactData = jsyaml.load(contactYml);
     document.getElementById("email").textContent = "Email: " + contactData.email;
-    const githubLink = document.querySelector("#github a");
-    githubLink.href = contactData.github;
-    githubLink.textContent = contactData.github;
+
+    const socialContainer = document.getElementById("socials");
+    socialContainer.innerHTML = ""; // clear existing content
+
+    contactData.socials.forEach(social => {
+      const link = document.createElement("a");
+      link.href = social.url;
+      link.textContent = social.platform;
+      link.target = "_blank";
+      socialContainer.appendChild(link);
+      socialContainer.appendChild(document.createElement("br")); // optional line break
+    });
+
 
   } catch (error) {
     console.error("Failed to load data:", error);
