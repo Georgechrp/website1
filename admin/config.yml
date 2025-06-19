@@ -1,4 +1,3 @@
-
 backend:
   name: git-gateway
   branch: main
@@ -7,19 +6,25 @@ media_folder: "images"
 public_folder: "/images"
 
 collections:
-  - name: "site_settings"
-    label: "Site Settings"
+  - name: "main_info"
+    label: "Main Info"
     files:
       - file: "data/site.yml"
-        label: "Main Info"
-        name: "main_info"
+        label: "Site Metadata"
+        name: "site"
         fields:
-          - { label: "Name", name: "name", widget: "string" }
-          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Browser Title", name: "title", widget: "string" }
+          - { label: "Full Name", name: "name", widget: "string" }
           - { label: "Profile Photo", name: "profile_photo", widget: "image" }
-          - { label: "About Me", name: "about_text", widget: "text" }
-          - { label: "Email", name: "email", widget: "string" }
-          - { label: "GitHub URL", name: "github", widget: "string" }
+
+  - name: "about"
+    label: "About"
+    files:
+      - file: "data/about.yml"
+        label: "About Me"
+        name: "about"
+        fields:
+          - { label: "About Text", name: "about_text", widget: "text" }
 
   - name: "skills"
     label: "Skills"
@@ -50,3 +55,13 @@ collections:
       - { label: "Degree", name: "degree", widget: "string" }
       - { label: "Institution", name: "institution", widget: "string" }
       - { label: "Year", name: "year", widget: "string" }
+
+  - name: "contact"
+    label: "Contact"
+    files:
+      - file: "data/contact.yml"
+        label: "Contact Info"
+        name: "contact"
+        fields:
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "GitHub", name: "github", widget: "string" }

@@ -8,23 +8,33 @@ document.getElementById("langSwitcher").addEventListener("change", async functio
   });
 });
 
-
-
 async function loadSiteData() {
   try {
-    const res = await fetch("data/site.yml");
-    const yamlText = await res.text();
-    const siteData = jsyaml.load(yamlText);
-
-    document.getElementById("name").textContent = siteData.name;
+    // site.yml
+    const resSite = await fetch("data/site.yml");
+    const siteYml = await resSite.text();
+    const siteData = jsyaml.load(siteYml);
     document.getElementById("title").textContent = siteData.title;
-    document.getElementById("about").textContent = siteData.about_text;
-    document.getElementById("email").textContent = siteData.email;
-    document.getElementById("github").href = siteData.github;
+    document.title = siteData.title; // browser tab title
+    document.getElementById("name").textContent = siteData.name;
     document.getElementById("profile").src = siteData.profile_photo;
 
+    // about.yml
+    const resAbout = await fetch("data/about.yml");
+    const aboutYml = await resAbout.text();
+    const aboutData = jsyaml.load(aboutYml);
+    document.getElementById("about").textContent = aboutData.about_text;
+
+    // contact.yml
+    const resContact = await fetch("data/contact.yml");
+    const contactYml = await resContact.text();
+    const contactData = jsyaml.load(contactYml);
+    document.getElementById("email").textContent = "Email: " + contactData.email;
+    document.querySelector("#github a").href = contactData.github;
+    document.querySelector("#github a").textContent = contactData.github;
+
   } catch (error) {
-    console.error("Failed to load site.yml:", error);
+    console.error("Failed to load data:", error);
   }
 }
 
