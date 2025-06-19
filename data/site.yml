@@ -1,1 +1,6 @@
-# Placeholder
+name: Your Name
+title: Your Title
+profile_photo: /images/profile.jpg
+about_text: A short bio goes here.
+email: you@example.com
+github: https://github.com/yourprofile
