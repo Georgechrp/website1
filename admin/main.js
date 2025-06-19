@@ -8,12 +8,6 @@ if (window.netlifyIdentity) {
   });
 }
 
-// Περιμένουμε να φορτωθεί πλήρως
-window.addEventListener("load", function () {
-  if (window.CMS) {
-    window.CMS.init();
-  } else {
-    console.error("CMS failed to load.");
-  }
-});
-  
+import CMS from "netlify-cms-app";
+
+CMS.init();
