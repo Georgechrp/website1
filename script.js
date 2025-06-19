@@ -21,6 +21,8 @@ async function loadSiteData() {
     document.getElementById("about").textContent = siteData.about_text;
     document.getElementById("email").textContent = siteData.email;
     document.getElementById("github").href = siteData.github;
+    document.getElementById("profile").src = siteData.profile_photo;
+
   } catch (error) {
     console.error("Failed to load site.yml:", error);
   }
